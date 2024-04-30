@@ -1,0 +1,18 @@
+current directory: /home/sanjan1000/OnlyMine/Internship/login/vendor/bundle/ruby/3.1.0/gems/racc-1.7.3/ext/racc/cparse
+/home/sanjan1000/.rbenv/versions/3.1.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/sanjan1000/OnlyMine/Internship/login/vendor/bundle/ruby/3.1.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240427-39592-i1ovqn sitelibdir\=./.gem.20240427-39592-i1ovqn clean
+
+current directory: /home/sanjan1000/OnlyMine/Internship/login/vendor/bundle/ruby/3.1.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240427-39592-i1ovqn sitelibdir\=./.gem.20240427-39592-i1ovqn
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/sanjan1000/OnlyMine/Internship/login/vendor/bundle/ruby/3.1.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240427-39592-i1ovqn sitelibdir\=./.gem.20240427-39592-i1ovqn install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20240427-39592-i1ovqn/racc
+
+current directory: /home/sanjan1000/OnlyMine/Internship/login/vendor/bundle/ruby/3.1.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240427-39592-i1ovqn sitelibdir\=./.gem.20240427-39592-i1ovqn clean

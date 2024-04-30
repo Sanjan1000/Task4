@@ -1,0 +1,9 @@
+<head><link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css"></head>
+<% if current_user %>
+  <h1>Welcome, <%= current_user.name %></h1>
+  <%= link_to 'Log out', user_session_path(current_user), data: { turbo_method: :delete } %><br>
+<% else %>
+  <h1>User management system</h1>
+  <%= link_to 'Login', new_user_session_path %><br>
+<% end %>
+<%= link_to 'Check User status', '/pages/secret' %>

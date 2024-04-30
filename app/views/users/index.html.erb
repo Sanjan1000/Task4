@@ -1,0 +1,43 @@
+<head>
+  <link rel="stylesheet" href="assets/stylesheets/custom.css">
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/block.css' rel='stylesheet'>
+</head>
+<h1>User Management table</h1>
+<%= form_tag(admin_use_path, method: :post) do %>
+<%= submit_tag 'Block' , name: 'block'%>
+<%= submit_tag 'Unblock' , name: 'unblock'%>
+<%= submit_tag 'Delete' , name: 'delete', style: 'background-color: red;'%>
+<table>
+  <thead>
+    <tr>
+      <th><input type="checkbox" id="select_all"></th> <th>id</th>
+      <th>name</th>
+      <th>email</th>
+      <th>Registration</th>
+      <th>Last login time</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><input type="checkbox" name="user_ids[]" value="<%= user.id %>"></td> 
+        <td><%= user.id %></td>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.created_at%></td>
+        <td><%= user.last_login_at%></td>
+        <td><%= user.is_blocked%></td>
+
+    <% end %>
+  </tbody>
+</table>
+<% end %>
+<script>
+  document.getElementById("select_all").addEventListener("click", function() {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"][name="user_ids[]"]');
+    for (var i = 0; i < checkboxes.length; i++) {
+      checkboxes[i].checked = this.checked;
+    }
+  });
+</script>

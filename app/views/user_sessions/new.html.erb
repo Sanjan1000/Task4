@@ -1,0 +1,15 @@
+<h1>Login page</h1>
+<head><link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css"></head>
+<%= form_with model: @user, url: user_sessions_path do |f| %>
+  <div>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </div>
+  <p>
+    <%= f.submit 'Login' %>
+  </p>
+<% end %>
